@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Perfect Ghar | Interior Design Company</title>
+
+<meta name="description" content="My Perfect Ghar is a leading interior design company offering residential and commercial interior solutions, modular kitchens, home renovation, and turnkey projects with premium quality and timely delivery.">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    color:#333;
+    line-height:1.6;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+section{
+    padding:80px 0;
+}
+
+h1,h2,h3{
+    margin-bottom:15px;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title h2{
+    font-size:36px;
+    color:#1f2937;
+}
+
+.section-title p{
+    color:#666;
+}
+
+/* Header */
+
+header{
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+    background:#fff;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 0;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+    color:#b8860b;
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#333;
+    font-weight:500;
+}
+
+.nav-links a:hover{
+    color:#b8860b;
+}
+
+/* Hero */
+
+.hero{
+    min-height:100vh;
+    background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1600&q=80');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    color:white;
+    text-align:center;
+}
+
+.hero-content{
+    max-width:850px;
+    margin:auto;
+}
+
+.hero h1{
+    font-size:55px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:20px;
+    margin-bottom:35px;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 30px;
+    margin:8px;
+    border-radius:5px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn-primary{
+    background:#b8860b;
+    color:#fff;
+}
+
+.btn-primary:hover{
+    background:#9d7308;
+}
+
+.btn-outline{
+    border:2px solid #fff;
+    color:#fff;
+}
+
+.btn-outline:hover{
+    background:#fff;
+    color:#333;
+}
+
+/* About */
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    align-items:center;
+}
+
+.about img{
+    width:100%;
+    border-radius:10px;
+}
+
+/* Services */
+
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:#fff;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card ul{
+    margin-top:10px;
+    padding-left:20px;
+}
+
+/* Why Choose Us */
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.feature{
+    text-align:center;
+    padding:25px;
+}
+
+/* Process */
+
+.process{
+    background:#f9f9f9;
+}
+
+.process-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:20px;
+}
+
+.step{
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    text-align:center;
+}
+
+.step span{
+    display:inline-block;
+    width:50px;
+    height:50px;
+    background:#b8860b;
+    color:white;
+    border-radius:50%;
+    line-height:50px;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+/* Projects */
+
+.projects-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.project{
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.project img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.project-content{
+    padding:20px;
+}
+
+/* Stats */
+
+.stats{
+    background:#1f2937;
+    color:white;
+}
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:25px;
+    text-align:center;
+}
+
+.stat h3{
+    font-size:40px;
+    color:#f4c542;
+}
+
+/* Testimonials */
+
+.testimonial-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.testimonial{
+    background:#fff;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+/* FAQ */
+
+.faq-item{
+    margin-bottom:15px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    overflow:hidden;
+}
+
+.faq-question{
+    padding:15px;
+    background:#f7f7f7;
+    cursor:pointer;
+    font-weight:600;
+}
+
+.faq-answer{
+    display:none;
+    padding:15px;
+}
+
+/* Contact */
+
+.contact{
+    background:#f9f9f9;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:12px;
+    margin-bottom:15px;
+    border:1px solid #ddd;
+    border-radius:5px;
+}
+
+.contact-form button{
+    border:none;
+    cursor:pointer;
+}
+
+/* Footer */
+
+footer{
+    background:#111827;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:38px;
+}
+
+.about-grid,
+.contact-grid{
+    grid-template-columns:1fr;
+}
+
+.nav-links{
+    display:none;
+}
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="container navbar">
+<div class="logo">My Perfect Ghar</div>
+<nav class="nav-links">
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#projects">Projects</a>
+<a href="#testimonials">Testimonials</a>
+<a href="#faq">FAQ</a>
+<a href="#contact">Contact</a>
+</nav>
+</div>
+</header>
+
+<section class="hero">
+<div class="container hero-content">
+<h1>Designing Beautiful Spaces That Feel Like Home</h1>
+<p>From modern apartments to luxury villas, My Perfect Ghar delivers personalized interior solutions tailored to your lifestyle and budget.</p>
+
+<a href="#contact" class="btn btn-primary">Get Free Consultation</a>
+<a href="#projects" class="btn btn-outline">View Portfolio</a>
+<a href="#contact" class="btn btn-primary">Request Quote</a>
+</div>
+</section>
+
+<section id="about" class="about">
+<div class="container">
+<div class="section-title">
+<h2>About Us</h2>
+<p>Transforming Houses into Dream Homes</p>
+</div>
+
+<div class="about-grid">
+<div>
+<img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1000&q=80" alt="">
+</div>
+
+<div>
+<p>
+At My Perfect Ghar, we believe every home should reflect the personality,
+lifestyle, and aspirations of its owners.
+</p>
+<br>
+<p>
+We specialize in creating beautiful, functional, and personalized interior spaces for apartments, villas, offices, and commercial spaces.
+</p>
+<br>
+<p>
+Our mission is to make premium interior design accessible, transparent, and stress-free for homeowners.
+</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="services">
+<div class="container">
+
+<div class="section-title">
+<h2>Our Services</h2>
+</div>
+
+<div class="services-grid">
+
+<div class="card">
+<h3>Residential Interior Design</h3>
+<ul>
+<li>Living Room Design</li>
+<li>Bedroom Design</li>
+<li>Modular Kitchen Design</li>
+<li>Dining Area Design</li>
+<li>Bathroom Design</li>
+<li>Kids Room Design</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Commercial Interior Design</h3>
+<ul>
+<li>Office Interiors</li>
+<li>Retail Stores</li>
+<li>Cafes & Restaurants</li>
+<li>Showrooms</li>
+<li>Co-working Spaces</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Modular Solutions</h3>
+<ul>
+<li>Modular Kitchens</li>
+<li>Wardrobes</li>
+<li>TV Units</li>
+<li>Storage Solutions</li>
+<li>Study Tables</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Renovation & Remodeling</h3>
+<ul>
+<li>Home Renovation</li>
+<li>False Ceiling Design</li>
+<li>Flooring Solutions</li>
+<li>Lighting Design</li>
+</ul>
+</div>
+
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<div class="section-title">
+<h2>Why Choose Us</h2>
+</div>
+
+<div class="features">
+
+<div class="feature">
+<h3>Customized Designs</h3>
+<p>Tailored to your style and budget.</p>
+</div>
+
+<div class="feature">
+<h3>Transparent Pricing</h3>
+<p>No hidden costs.</p>
+</div>
+
+<div class="feature">
+<h3>Quality Materials</h3>
+<p>Premium materials and trusted brands.</p>
+</div>
+
+<div class="feature">
+<h3>On-Time Delivery</h3>
+<p>Timely project completion.</p>
+</div>
+
+<div class="feature">
+<h3>Expert Team</h3>
+<p>Experienced designers and craftsmen.</p>
+</div>
+
+<div class="feature">
+<h3>3D Visualization</h3>
+<p>See your dream space before execution.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="process">
+<div class="container">
+
+<div class="section-title">
+<h2>Our Process</h2>
+</div>
+
+<div class="process-grid">
+<div class="step"><span>1</span><h4>Consultation</h4></div>
+<div class="step"><span>2</span><h4>Design Planning</h4></div>
+<div class="step"><span>3</span><h4>3D Visualization</h4></div>
+<div class="step"><span>4</span><h4>Material Selection</h4></div>
+<div class="step"><span>5</span><h4>Execution</h4></div>
+<div class="step"><span>6</span><h4>Handover</h4></div>
+</div>
+
+</div>
+</section>
+
+<section id="projects">
+<div class="container">
+
+<div class="section-title">
+<h2>Featured Projects</h2>
+</div>
+
+<div class="projects-grid">
+
+<div class="project">
+<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85" alt="">
+<div class="project-content">
+<h3>Modern 3BHK Apartment</h3>
+<p>Kolkata | 1,500 sq ft | Contemporary Modern</p>
+</div>
+</div>
+
+<div class="project">
+<img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c" alt="">
+<div class="project-content">
+<h3>Luxury Villa Interior</h3>
+<p>New Town | 3,500 sq ft | Luxury Minimalist</p>
+</div>
+</div>
+
+<div class="project">
+<img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72" alt="">
+<div class="project-content">
+<h3>Corporate Office Space</h3>
+<p>Salt Lake | 5,000 sq ft | Modern Workspace</p>
+</div>
+</div>
+
+<div class="project">
+<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85" alt="">
+<div class="project-content">
+<h3>Compact Urban Home</h3>
+<p>Rajarhat | 900 sq ft | Space-Saving Modern</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="stats">
+<div class="container">
+
+<div class="stats-grid">
+<div class="stat"><h3>500+</h3><p>Projects</p></div>
+<div class="stat"><h3>8+</h3><p>Years Experience</p></div>
+<div class="stat"><h3>50+</h3><p>Design Experts</p></div>
+<div class="stat"><h3>95%</h3><p>Satisfaction</p></div>
+<div class="stat"><h3>20+</h3><p>Cities Served</p></div>
+</div>
+
+</div>
+</section>
+
+<section id="testimonials">
+<div class="container">
+
+<div class="section-title">
+<h2>Testimonials</h2>
+</div>
+
+<div class="testimonial-grid">
+
+<div class="testimonial">
+★★★★★
+<p><strong>Priyanshu Chatterjee</strong></p>
+<p>My Perfect Ghar transformed our apartment beautifully. The team understood our vision and delivered beyond expectations.</p>
+</div>
+
+<div class="testimonial">
+★★★★★
+<p><strong>Subhankar Ghosh</strong></p>
+<p>Professional service, transparent pricing, and excellent execution. Highly recommended.</p>
+</div>
+
+<div class="testimonial">
+★★★★★
+<p><strong>Neha Gupta</strong></p>
+<p>Our modular kitchen and wardrobe designs are stunning and functional. Great experience overall.</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section id="faq">
+<div class="container">
+
+<div class="section-title">
+<h2>Frequently Asked Questions</h2>
+</div>
+
+<div class="faq-item">
+<div class="faq-question">How much does interior design cost?</div>
+<div class="faq-answer">Costs vary based on project size, materials, and design requirements.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-question">Do you provide 3D designs?</div>
+<div class="faq-answer">Yes, we provide detailed 3D visualizations before execution.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-question">How long does a project take?</div>
+<div class="faq-answer">Most residential projects take between 6–12 weeks.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-question">Do you offer turnkey solutions?</div>
+<div class="faq-answer">Yes, we handle everything from design to handover.</div>
+</div>
+
+</div>
+</section>
+
+<section id="contact" class="contact">
+<div class="container">
+
+<div class="section-title">
+<h2>Contact Us</h2>
+</div>
+
+<div class="contact-grid">
+
+<div>
+<h3>My Perfect Ghar</h3>
+<p><strong>Address:</strong><br>
+Chanditala Main Road, Arya Pally, Behala,<br>
+Kolkata, West Bengal 700053
+</p>
+
+<br>
+
+<p><strong>Phone:</strong> +91 9477477057</p>
+<p><strong>Email:</strong> myperfectghar26@gmail.com</p>
+<p><strong>Website:</strong> www.myperfectghar.in</p>
+<p><strong>Hours:</strong> Monday – Saturday, 9 AM – 7 PM</p>
+</div>
+
+<div class="contact-form">
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Form</title>
+</head>
+<body>
+
+<form action="https://formsubmit.co/myperfectghar26@gmail.com" method="POST">
+
+    <label>Name:</label>
+    <input type="text" name="name" required><br><br>
+
+    <label>Contact Number:</label>
+    <input type="" name="Contact Number" required><br><br>
+
+    <label>Email:</label>
+    <input type="email" name="email" required><br><br>
+
+    <label>Message:</label>
+    <textarea name="message" required></textarea><br><br>
+
+    <button type=" SEND INQUIRY ">SEND INQUIRY</button>
+
+</form>
+
+</body>
+</html>
+</div>
+
+</div>
+</section>
+
+<footer>
+<p>© 2025 My Perfect Ghar. All Rights Reserved.</p>
+</footer>
+
+<script>
+document.querySelectorAll(".faq-question").forEach(item=>{
+item.addEventListener("click",()=>{
+let answer=item.nextElementSibling;
+answer.style.display=
+answer.style.display==="block"?"none":"block";
+});
+});
+</script>
+
+</body>
+</html>
